@@ -49,7 +49,14 @@ if (appType==="clockface"){
 document.getElementById("demoTitle").innerHTML = demoTitle;
 
 
-
+function setDefaultVideo(){
+  var sdk = 5;
+  var filename = appName.replace(/\s+/g, '_').toLowerCase() + ".mp4";
+  var src = "./"+ appType +"/"+sdk+"/"+filename;
+  console.log("src: " + src);
+  video.setFilename(src);
+}
+setDefaultVideo();
 
 function changeVideo(){
   var sdk = document.getElementById("sdkSelection").value;
