@@ -42,9 +42,9 @@ document.getElementById("sdk5").innerHTML = devicesListSdk5.join(", ");
 console.log(devicesListSdk5);
 const appName = urlParams.get('appName');
 console.log(appName);
-var demoTitle = appName.replace("_", " ").toUpperCase();
+var demoTitle = appName.replace(/_/g, " ").toUpperCase();
 if (appType==="clockface"){
-  demoTitle =  appName.replace("_", " ").toUpperCase() + " CLOCK";
+  demoTitle =  appName.replace(/_/g, " ").toUpperCase() + " CLOCK";
 }
 document.getElementById("demoTitle").innerHTML = demoTitle;
 
