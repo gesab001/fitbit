@@ -42,9 +42,9 @@ document.getElementById("sdk5").innerHTML = devicesListSdk5.join(", ");
 console.log(devicesListSdk5);
 const appName = urlParams.get('appName');
 console.log(appName);
-var demoTitle = appName;
+var demoTitle = appName.replace("_", " ").toUpperCase();
 if (appType==="clockface"){
-  demoTitle = appName + " Clock";
+  demoTitle =  appName.replace("_", " ").toUpperCase() + " CLOCK";
 }
 document.getElementById("demoTitle").innerHTML = demoTitle;
 
@@ -55,7 +55,7 @@ function setDefaultVideo(){
   var src = "./"+ appType +"/"+sdk+"/"+filename;
   console.log("src: " + src);
   video.setFilename(src);
-}
+  }
 setDefaultVideo();
 
 function changeVideo(){
